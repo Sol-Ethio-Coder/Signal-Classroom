@@ -1,0 +1,22 @@
+# Render Blueprint: the live server (Socket.io + API). Pages can be served from here too.
+services:
+  - type: web
+    name: signal-classroom
+    runtime: node
+    plan: free              # free = sleeps after 15 min idle and forgets classes on restart. See README.
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: ADMIN_USER
+        sync: false         # Render asks you for this value
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false         # your Vercel address, e.g. https://signal-classroom.vercel.app
+    # To keep classes between restarts (paid plan required):
+    #   plan: starter
+    #   disk: { name: signal-data, mountPath: /var/data, sizeGB: 1 }
+    #   and add env var DATA_DIR=/var/data

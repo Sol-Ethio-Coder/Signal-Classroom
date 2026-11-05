@@ -1,0 +1,12 @@
+[
+ {
+  "id": "maths",
+  "title": "High School Mathematics",
+  "subtitle": "From equations to probability",
+  "level": "Grades 9–12",
+  "description": "A 14-lesson course built for live teaching: short notes, worked examples, auto-checked practice and quick quizzes. Teach it in a Signal Classroom or let students study alone.",
+  "lessons": 14,
+  "minutes": 405,
+  "modules": 5
+ }
+]

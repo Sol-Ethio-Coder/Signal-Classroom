@@ -1,0 +1,1410 @@
+{
+ "id": "maths",
+ "title": "High School Mathematics",
+ "subtitle": "From equations to probability",
+ "level": "Grades 9–12",
+ "description": "A 14-lesson course built for live teaching: short notes, worked examples, auto-checked practice and quick quizzes. Teach it in a Signal Classroom or let students study alone.",
+ "note": "Topics are grouped for clarity. Check the order against your own national syllabus and adjust as needed.",
+ "modules": [
+  {
+   "id": "m1",
+   "title": "Algebra foundations",
+   "blurb": "Equations, inequalities and systems.",
+   "lessons": [
+    {
+     "id": "m1-l1",
+     "title": "Solving linear equations",
+     "minutes": 25,
+     "goals": [
+      "Solve equations with one unknown using inverse operations",
+      "Expand brackets and collect like terms",
+      "Check a solution by substituting it back"
+     ],
+     "notes": [
+      "An equation is a balance. Whatever you do to one side, you must do to the other.",
+      {
+       "h": "The routine"
+      },
+      {
+       "list": [
+        "Expand any brackets.",
+        "Collect the x-terms on one side and the numbers on the other.",
+        "Divide by the coefficient of x.",
+        "Check by substituting your answer back."
+       ]
+      },
+      {
+       "f": "ax + b = c   →   x = (c − b) / a"
+      }
+     ],
+     "examples": [
+      {
+       "q": "Solve 3x + 5 = 20",
+       "steps": [
+        "Subtract 5 from both sides: 3x = 15",
+        "Divide both sides by 3: x = 5"
+       ],
+       "a": "x = 5"
+      },
+      {
+       "q": "Solve 2(x − 3) = 4x + 2",
+       "steps": [
+        "Expand: 2x − 6 = 4x + 2",
+        "Subtract 4x from both sides: −2x − 6 = 2",
+        "Add 6: −2x = 8",
+        "Divide by −2: x = −4",
+        "Check: 2(−4 − 3) = −14 and 4(−4) + 2 = −14 ✓"
+       ],
+       "a": "x = −4"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Solve 5x − 7 = 18. What is x?",
+       "a": 5,
+       "sol": "5x = 25, so x = 5.",
+       "tol": 0.01,
+       "hint": "Add 7 to both sides first."
+      },
+      {
+       "q": "Solve 3(x + 2) = 2x + 11. What is x?",
+       "a": 5,
+       "sol": "3x + 6 = 2x + 11, so x = 5.",
+       "tol": 0.01,
+       "hint": "Expand the bracket first."
+      },
+      {
+       "q": "Solve x/4 + 3 = 8. What is x?",
+       "a": 20,
+       "sol": "x/4 = 5, so x = 20.",
+       "tol": 0.01
+      },
+      {
+       "q": "Solve 7 − 2x = 1. What is x?",
+       "a": 3,
+       "sol": "−2x = −6, so x = 3.",
+       "tol": 0.01,
+       "hint": "Subtract 7 from both sides."
+      }
+     ],
+     "quiz": [
+      {
+       "q": "What is the best first step to solve 2x + 6 = 14?",
+       "options": [
+        "Divide both sides by 6",
+        "Subtract 6 from both sides",
+        "Add 6 to both sides",
+        "Multiply both sides by 2"
+       ],
+       "answer": 1,
+       "why": "Undo the +6 by subtracting 6 from both sides, giving 2x = 8."
+      },
+      {
+       "q": "If 4(x − 1) = 20, what is x?",
+       "options": [
+        "4",
+        "5",
+        "6",
+        "9"
+       ],
+       "answer": 2,
+       "why": "x − 1 = 5, so x = 6."
+      }
+     ],
+     "tip": "Have students say each step aloud (\"I subtract 6 from both sides\"). It builds the balance habit."
+    },
+    {
+     "id": "m1-l2",
+     "title": "Inequalities",
+     "minutes": 25,
+     "goals": [
+      "Solve linear inequalities",
+      "Flip the sign when multiplying or dividing by a negative",
+      "Describe solutions on a number line"
+     ],
+     "notes": [
+      "An inequality compares two expressions using <, >, ≤ or ≥. It usually has infinitely many solutions.",
+      {
+       "h": "The golden rule"
+      },
+      "Solve it like an equation, but when you multiply or divide both sides by a negative number, reverse the inequality sign.",
+      {
+       "f": "−2x < 8   →   x > −4"
+      },
+      {
+       "list": [
+        "Open circle: the endpoint is not included (< or >).",
+        "Closed circle: the endpoint is included (≤ or ≥)."
+       ]
+      }
+     ],
+     "examples": [
+      {
+       "q": "Solve 3x − 4 ≥ 11",
+       "steps": [
+        "Add 4: 3x ≥ 15",
+        "Divide by 3: x ≥ 5"
+       ],
+       "a": "x ≥ 5 (closed circle at 5, arrow to the right)"
+      },
+      {
+       "q": "Solve −2x < 8",
+       "steps": [
+        "Divide by −2 and flip the sign: x > −4"
+       ],
+       "a": "x > −4"
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the largest integer that satisfies 2x + 3 < 11?",
+       "a": 3,
+       "sol": "2x < 8, so x < 4. The largest integer is 3.",
+       "tol": 0.01
+      },
+      {
+       "q": "What is the smallest integer that satisfies 5x − 2 ≥ 13?",
+       "a": 3,
+       "sol": "5x ≥ 15, so x ≥ 3.",
+       "tol": 0.01
+      },
+      {
+       "q": "What is the smallest integer that satisfies −3x ≤ 12?",
+       "a": -4,
+       "sol": "Divide by −3 and flip the sign: x ≥ −4.",
+       "tol": 0.01,
+       "hint": "Remember the flip."
+      },
+      {
+       "q": "How many positive integers satisfy x + 4 < 9?",
+       "a": 4,
+       "sol": "x < 5, so x = 1, 2, 3, 4.",
+       "tol": 0.01
+      }
+     ],
+     "quiz": [
+      {
+       "q": "Solve −x > 3.",
+       "options": [
+        "x > −3",
+        "x < −3",
+        "x > 3",
+        "x < 3"
+       ],
+       "answer": 1,
+       "why": "Multiply by −1 and flip the sign: x < −3."
+      },
+      {
+       "q": "Which sign means \"at least\"?",
+       "options": [
+        "<",
+        "≤",
+        ">",
+        "≥"
+       ],
+       "answer": 3,
+       "why": "At least means greater than or equal to."
+      }
+     ],
+     "tip": "Test one number from your solution set in the original inequality to confirm the direction."
+    },
+    {
+     "id": "m1-l3",
+     "title": "Systems of linear equations",
+     "minutes": 30,
+     "goals": [
+      "Solve two equations with two unknowns",
+      "Choose between substitution and elimination",
+      "Build a system from a word problem"
+     ],
+     "notes": [
+      "A system has two equations and two unknowns. The solution is the point where the two lines cross.",
+      {
+       "h": "Elimination"
+      },
+      "Add or subtract the equations so that one variable disappears.",
+      {
+       "h": "Substitution"
+      },
+      "Write one variable in terms of the other, then substitute it into the second equation.",
+      {
+       "f": "x + y = 10 and x − y = 2   →   add: 2x = 12"
+      }
+     ],
+     "examples": [
+      {
+       "q": "Solve x + y = 10 and x − y = 2",
+       "steps": [
+        "Add the equations: 2x = 12, so x = 6",
+        "Substitute: 6 + y = 10, so y = 4",
+        "Check: 6 − 4 = 2 ✓"
+       ],
+       "a": "x = 6, y = 4"
+      },
+      {
+       "q": "Solve y = 2x − 1 and 3x + y = 14",
+       "steps": [
+        "Substitute y: 3x + 2x − 1 = 14",
+        "5x = 15, so x = 3",
+        "y = 2(3) − 1 = 5"
+       ],
+       "a": "x = 3, y = 5"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Solve x + y = 7 and x − y = 1. What is x?",
+       "a": 4,
+       "sol": "Add: 2x = 8, so x = 4.",
+       "tol": 0.01
+      },
+      {
+       "q": "Solve 2x + y = 11 and x − y = 1. What is y?",
+       "a": 3,
+       "sol": "Add: 3x = 12, so x = 4, then y = 3.",
+       "tol": 0.01
+      },
+      {
+       "q": "Solve y = 3x and x + y = 20. What is y?",
+       "a": 15,
+       "sol": "x + 3x = 20, so x = 5 and y = 15.",
+       "tol": 0.01
+      },
+      {
+       "q": "Two adult tickets and three child tickets cost 190 birr. One adult and one child ticket cost 70 birr. What does one child ticket cost (birr)?",
+       "a": 50,
+       "sol": "a + c = 70 and 2a + 3c = 190. Substitute a = 70 − c: 140 + c = 190, so c = 50.",
+       "tol": 0.01,
+       "hint": "Let a = adult price and c = child price."
+      }
+     ],
+     "quiz": [
+      {
+       "q": "Which method is quickest for x + y = 9 and x − y = 3?",
+       "options": [
+        "Substitution",
+        "Elimination by adding",
+        "Guess and check",
+        "Graphing only"
+       ],
+       "answer": 1,
+       "why": "The y-terms are opposites, so adding removes y immediately."
+      },
+      {
+       "q": "Two parallel lines form a system with...",
+       "options": [
+        "One solution",
+        "Two solutions",
+        "No solution",
+        "Infinitely many solutions"
+       ],
+       "answer": 2,
+       "why": "Parallel lines never meet."
+      }
+     ],
+     "tip": "Ask students to check their answer in both original equations, not just one."
+    }
+   ]
+  },
+  {
+   "id": "m2",
+   "title": "Quadratics and functions",
+   "blurb": "Factorising, the formula, and graphs.",
+   "lessons": [
+    {
+     "id": "m2-l1",
+     "title": "Factorising and solving quadratics",
+     "minutes": 30,
+     "goals": [
+      "Factorise x² + bx + c",
+      "Use the zero-product property",
+      "Solve quadratic equations by factorising"
+     ],
+     "notes": [
+      "A quadratic equation has the form ax² + bx + c = 0.",
+      {
+       "h": "Factorising when a = 1"
+      },
+      "Find two numbers that multiply to c and add to b.",
+      {
+       "f": "x² + bx + c = (x + p)(x + q)   where pq = c and p + q = b"
+      },
+      {
+       "h": "Zero-product property"
+      },
+      "If A × B = 0, then A = 0 or B = 0."
+     ],
+     "examples": [
+      {
+       "q": "Solve x² + 5x + 6 = 0",
+       "steps": [
+        "Two numbers that multiply to 6 and add to 5: 2 and 3",
+        "Factorise: (x + 2)(x + 3) = 0",
+        "So x + 2 = 0 or x + 3 = 0"
+       ],
+       "a": "x = −2 or x = −3"
+      },
+      {
+       "q": "Solve x² − x − 12 = 0",
+       "steps": [
+        "Multiply to −12 and add to −1: −4 and 3",
+        "Factorise: (x − 4)(x + 3) = 0"
+       ],
+       "a": "x = 4 or x = −3"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Solve x² − 7x + 12 = 0. What is the larger root?",
+       "a": 4,
+       "sol": "(x − 3)(x − 4) = 0, so the roots are 3 and 4.",
+       "tol": 0.01
+      },
+      {
+       "q": "Solve x² + 2x − 15 = 0. What is the positive root?",
+       "a": 3,
+       "sol": "(x + 5)(x − 3) = 0, so x = −5 or x = 3.",
+       "tol": 0.01
+      },
+      {
+       "q": "Solve x² − 9 = 0. What is the positive root?",
+       "a": 3,
+       "sol": "x² = 9, so x = ±3.",
+       "tol": 0.01
+      },
+      {
+       "q": "Solve x² = 5x. What is the non-zero root?",
+       "a": 5,
+       "sol": "x² − 5x = 0, so x(x − 5) = 0. Never divide by x: you would lose the root x = 0.",
+       "tol": 0.01
+      }
+     ],
+     "quiz": [
+      {
+       "q": "Factorise x² + 7x + 10.",
+       "options": [
+        "(x + 1)(x + 10)",
+        "(x + 2)(x + 5)",
+        "(x − 2)(x − 5)",
+        "(x + 3)(x + 4)"
+       ],
+       "answer": 1,
+       "why": "2 × 5 = 10 and 2 + 5 = 7."
+      },
+      {
+       "q": "If (x − 2)(x + 6) = 0, then x is...",
+       "options": [
+        "2 only",
+        "−6 only",
+        "2 or −6",
+        "−2 or 6"
+       ],
+       "answer": 2,
+       "why": "Set each factor to zero: x = 2 or x = −6."
+      }
+     ],
+     "tip": "Always make one side zero before factorising."
+    },
+    {
+     "id": "m2-l2",
+     "title": "The quadratic formula and the discriminant",
+     "minutes": 30,
+     "goals": [
+      "Use the quadratic formula",
+      "Compute the discriminant",
+      "Decide how many real roots a quadratic has"
+     ],
+     "notes": [
+      "Not every quadratic factorises neatly. The quadratic formula always works.",
+      {
+       "f": "x = (−b ± √(b² − 4ac)) / (2a)"
+      },
+      {
+       "h": "The discriminant"
+      },
+      {
+       "f": "Δ = b² − 4ac"
+      },
+      {
+       "list": [
+        "Δ > 0: two different real roots",
+        "Δ = 0: one repeated real root",
+        "Δ < 0: no real roots (the parabola misses the x-axis)"
+       ]
+      }
+     ],
+     "examples": [
+      {
+       "q": "Solve 2x² + 3x − 2 = 0",
+       "steps": [
+        "a = 2, b = 3, c = −2",
+        "Δ = 3² − 4(2)(−2) = 9 + 16 = 25",
+        "x = (−3 ± 5) / 4",
+        "x = 2/4 = 1/2   or   x = −8/4 = −2"
+       ],
+       "a": "x = 1/2 or x = −2"
+      },
+      {
+       "q": "How many real roots does x² + 2x + 5 = 0 have?",
+       "steps": [
+        "Δ = 2² − 4(1)(5) = 4 − 20 = −16",
+        "Δ < 0"
+       ],
+       "a": "None"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Find the discriminant of x² − 6x + 9.",
+       "a": 0,
+       "sol": "Δ = 36 − 36 = 0.",
+       "tol": 0.01
+      },
+      {
+       "q": "Find the discriminant of 3x² + 2x − 1.",
+       "a": 16,
+       "sol": "Δ = 4 − 4(3)(−1) = 4 + 12 = 16.",
+       "tol": 0.01
+      },
+      {
+       "q": "Solve 2x² − 5x − 3 = 0. What is the larger root?",
+       "a": 3,
+       "sol": "Δ = 25 + 24 = 49. x = (5 ± 7)/4 = 3 or −1/2.",
+       "tol": 0.01
+      },
+      {
+       "q": "How many real roots does x² + x + 1 = 0 have?",
+       "a": 0,
+       "sol": "Δ = 1 − 4 = −3, which is negative, so there are no real roots.",
+       "tol": 0.01
+      }
+     ],
+     "quiz": [
+      {
+       "q": "If Δ = 0, the quadratic has...",
+       "options": [
+        "No real roots",
+        "Two different real roots",
+        "One repeated root",
+        "Three roots"
+       ],
+       "answer": 2,
+       "why": "The formula gives the same value for ±, so there is one repeated root."
+      },
+      {
+       "q": "What is the denominator of the quadratic formula?",
+       "options": [
+        "a",
+        "2a",
+        "2b",
+        "b²"
+       ],
+       "answer": 1,
+       "why": "It is 2a."
+      }
+     ],
+     "tip": "Write a, b and c with their signs before substituting. Sign slips cause most errors."
+    },
+    {
+     "id": "m2-l3",
+     "title": "Functions and graphs",
+     "minutes": 30,
+     "goals": [
+      "Use function notation f(x)",
+      "Find the gradient and intercept of a line",
+      "Find the vertex of a parabola"
+     ],
+     "notes": [
+      "A function gives exactly one output for each input. f(x) means \"the output when the input is x\".",
+      {
+       "f": "f(x) = 2x² − 3x + 1   →   f(3) = 2(9) − 9 + 1 = 10"
+      },
+      {
+       "h": "Straight lines"
+      },
+      {
+       "f": "y = mx + c   (m = gradient, c = y-intercept)"
+      },
+      {
+       "f": "m = (y₂ − y₁) / (x₂ − x₁)"
+      },
+      {
+       "h": "Parabolas"
+      },
+      "The graph of y = ax² + bx + c is a parabola. Its vertex is at x = −b / (2a). It opens upward if a > 0 and downward if a < 0."
+     ],
+     "examples": [
+      {
+       "q": "Find the equation of the line through (0, 1) and (2, 5)",
+       "steps": [
+        "m = (5 − 1) / (2 − 0) = 2",
+        "The line crosses the y-axis at 1"
+       ],
+       "a": "y = 2x + 1"
+      },
+      {
+       "q": "Find the vertex of y = x² − 4x + 3",
+       "steps": [
+        "x = −(−4) / (2 × 1) = 2",
+        "y = 4 − 8 + 3 = −1"
+       ],
+       "a": "Vertex (2, −1), a minimum point"
+      }
+     ],
+     "practice": [
+      {
+       "q": "If f(x) = 3x − 4, find f(5).",
+       "a": 11,
+       "sol": "f(5) = 15 − 4 = 11.",
+       "tol": 0.01
+      },
+      {
+       "q": "If f(x) = x² + 1, find f(−3).",
+       "a": 10,
+       "sol": "(−3)² + 1 = 9 + 1 = 10.",
+       "tol": 0.01,
+       "hint": "Square the −3 first."
+      },
+      {
+       "q": "Find the gradient of the line through (1, 2) and (4, 11).",
+       "a": 3,
+       "sol": "m = (11 − 2) / (4 − 1) = 9/3 = 3.",
+       "tol": 0.01
+      },
+      {
+       "q": "What is the minimum value of y = x² − 6x + 5?",
+       "a": -4,
+       "sol": "The vertex is at x = 3, so y = 9 − 18 + 5 = −4.",
+       "tol": 0.01
+      }
+     ],
+     "quiz": [
+      {
+       "q": "What is the y-intercept of y = −2x + 7?",
+       "options": [
+        "−2",
+        "7",
+        "3.5",
+        "−7"
+       ],
+       "answer": 1,
+       "why": "In y = mx + c, the intercept is c = 7."
+      },
+      {
+       "q": "The parabola y = −x² + 4 opens...",
+       "options": [
+        "Upward",
+        "Downward",
+        "To the left",
+        "To the right"
+       ],
+       "answer": 1,
+       "why": "The coefficient of x² is negative."
+      }
+     ],
+     "tip": "Sketch every answer. Even a rough graph catches sign errors."
+    }
+   ]
+  },
+  {
+   "id": "m3",
+   "title": "Geometry and trigonometry",
+   "blurb": "Pythagoras, trig ratios and circles.",
+   "lessons": [
+    {
+     "id": "m3-l1",
+     "title": "Pythagoras and coordinate geometry",
+     "minutes": 30,
+     "goals": [
+      "Use Pythagoras' theorem",
+      "Find the distance and midpoint between two points",
+      "Test whether a triangle is right-angled"
+     ],
+     "notes": [
+      "In a right-angled triangle, the square of the hypotenuse equals the sum of the squares of the other two sides.",
+      {
+       "f": "a² + b² = c²"
+      },
+      {
+       "h": "On the coordinate plane"
+      },
+      {
+       "f": "Distance = √((x₂ − x₁)² + (y₂ − y₁)²)"
+      },
+      {
+       "f": "Midpoint = ((x₁ + x₂) / 2 , (y₁ + y₂) / 2)"
+      },
+      {
+       "list": [
+        "Common triples: 3-4-5, 5-12-13, 8-15-17, 7-24-25"
+       ]
+      }
+     ],
+     "examples": [
+      {
+       "q": "The legs of a right triangle are 6 and 8. Find the hypotenuse.",
+       "steps": [
+        "c² = 6² + 8² = 36 + 64 = 100",
+        "c = 10"
+       ],
+       "a": "10"
+      },
+      {
+       "q": "Find the distance and midpoint of (1, 2) and (4, 6)",
+       "steps": [
+        "Distance = √(3² + 4²) = √25 = 5",
+        "Midpoint = (5/2, 8/2) = (2.5, 4)"
+       ],
+       "a": "Distance 5, midpoint (2.5, 4)"
+      }
+     ],
+     "practice": [
+      {
+       "q": "A right triangle has legs 5 and 12. Find the hypotenuse.",
+       "a": 13,
+       "sol": "25 + 144 = 169, so c = 13.",
+       "tol": 0.01
+      },
+      {
+       "q": "The hypotenuse is 17 and one leg is 8. Find the other leg.",
+       "a": 15,
+       "sol": "289 − 64 = 225, so the leg is 15.",
+       "tol": 0.01
+      },
+      {
+       "q": "Find the distance between (−2, 1) and (4, 9).",
+       "a": 10,
+       "sol": "√(6² + 8²) = √100 = 10.",
+       "tol": 0.01
+      },
+      {
+       "q": "Find the x-coordinate of the midpoint of (−2, 1) and (4, 9).",
+       "a": 1,
+       "sol": "(−2 + 4) / 2 = 1.",
+       "tol": 0.01
+      }
+     ],
+     "quiz": [
+      {
+       "q": "Is a triangle with sides 7, 24 and 25 right-angled?",
+       "options": [
+        "Yes, because 7² + 24² = 25²",
+        "No, because 7 + 24 ≠ 25",
+        "Yes, because 25 is the longest side",
+        "It cannot be told"
+       ],
+       "answer": 0,
+       "why": "49 + 576 = 625 = 25²."
+      },
+      {
+       "q": "The midpoint of (0, 0) and (6, 10) is...",
+       "options": [
+        "(3, 5)",
+        "(6, 10)",
+        "(5, 3)",
+        "(12, 20)"
+       ],
+       "answer": 0,
+       "why": "Average the x-values and the y-values."
+      }
+     ],
+     "tip": "Draw the right triangle under every coordinate-distance problem so students see where Pythagoras comes from."
+    },
+    {
+     "id": "m3-l2",
+     "title": "Trigonometric ratios",
+     "minutes": 35,
+     "goals": [
+      "Name the opposite, adjacent and hypotenuse sides",
+      "Use sin, cos and tan to find sides",
+      "Recall the special-angle values"
+     ],
+     "notes": [
+      "Label the sides relative to the angle θ: opposite, adjacent and hypotenuse.",
+      {
+       "f": "sin θ = opposite / hypotenuse"
+      },
+      {
+       "f": "cos θ = adjacent / hypotenuse"
+      },
+      {
+       "f": "tan θ = opposite / adjacent"
+      },
+      "Memory aid: SOH CAH TOA.",
+      {
+       "h": "Special angles (approximate values)"
+      },
+      {
+       "list": [
+        "sin 30° = 0.5 and cos 60° = 0.5",
+        "sin 45° = cos 45° ≈ 0.707 and tan 45° = 1",
+        "sin 60° = cos 30° ≈ 0.866",
+        "tan 30° ≈ 0.577 and tan 60° ≈ 1.732"
+       ]
+      }
+     ],
+     "examples": [
+      {
+       "q": "A 10 m ladder leans at 60° to the ground. How high up the wall does it reach?",
+       "steps": [
+        "The height is opposite the 60° angle and the ladder is the hypotenuse",
+        "sin 60° = height / 10",
+        "height = 10 × 0.866 = 8.66 m"
+       ],
+       "a": "About 8.66 m"
+      },
+      {
+       "q": "The opposite side is 5 and the adjacent side is 5. Find the angle.",
+       "steps": [
+        "tan θ = 5/5 = 1",
+        "θ = 45°"
+       ],
+       "a": "45°"
+      }
+     ],
+     "practice": [
+      {
+       "q": "A right triangle has opposite 6 and hypotenuse 10. What is sin θ?",
+       "a": 0.6,
+       "sol": "6 / 10 = 0.6.",
+       "tol": 0.01
+      },
+      {
+       "q": "A right triangle has adjacent 12 and hypotenuse 13. Find cos θ to 2 decimal places.",
+       "a": 0.92,
+       "sol": "12 / 13 ≈ 0.92.",
+       "tol": 0.01
+      },
+      {
+       "q": "The hypotenuse is 20 and the angle is 30°. Find the side opposite the angle.",
+       "a": 10,
+       "sol": "20 × sin 30° = 20 × 0.5 = 10.",
+       "tol": 0.01
+      },
+      {
+       "q": "You stand 20 m from a tower and the angle of elevation to its top is 45°. How tall is the tower (m)?",
+       "a": 20,
+       "sol": "tan 45° = 1, so height = 20 × 1 = 20 m.",
+       "tol": 0.01,
+       "hint": "Which ratio links opposite and adjacent?"
+      },
+      {
+       "q": "The hypotenuse is 14 and the angle is 60°. Find the adjacent side.",
+       "a": 7,
+       "sol": "14 × cos 60° = 14 × 0.5 = 7.",
+       "tol": 0.01
+      }
+     ],
+     "quiz": [
+      {
+       "q": "Which ratio equals opposite ÷ adjacent?",
+       "options": [
+        "sin",
+        "cos",
+        "tan",
+        "none of these"
+       ],
+       "answer": 2,
+       "why": "tan θ = opposite / adjacent."
+      },
+      {
+       "q": "sin 30° equals...",
+       "options": [
+        "0.5",
+        "0.866",
+        "1",
+        "0.707"
+       ],
+       "answer": 0,
+       "why": "This is one of the special-angle values."
+      }
+     ],
+     "tip": "Make students label the triangle O, A and H before choosing a ratio."
+    },
+    {
+     "id": "m3-l3",
+     "title": "Circles: length, area, arcs and sectors",
+     "minutes": 30,
+     "goals": [
+      "Find circumference and area",
+      "Find arc length and sector area",
+      "Choose a sensible value for π"
+     ],
+     "notes": [
+      "Use π ≈ 3.14 (or 22/7) unless the question says otherwise.",
+      {
+       "f": "Circumference = 2πr = πd"
+      },
+      {
+       "f": "Area = πr²"
+      },
+      {
+       "f": "Arc length = (θ / 360) × 2πr"
+      },
+      {
+       "f": "Sector area = (θ / 360) × πr²"
+      },
+      "A sector is a \"slice\" of the circle, and θ is the angle at the centre."
+     ],
+     "examples": [
+      {
+       "q": "A circle has radius 7 cm. Use π = 22/7.",
+       "steps": [
+        "C = 2 × 22/7 × 7 = 44 cm",
+        "A = 22/7 × 7² = 154 cm²"
+       ],
+       "a": "C = 44 cm, A = 154 cm²"
+      },
+      {
+       "q": "Find the arc length for a 90° sector with r = 8 (π = 3.14).",
+       "steps": [
+        "(90 / 360) × 2 × 3.14 × 8",
+        "= 0.25 × 50.24 = 12.56"
+       ],
+       "a": "12.56"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Use π = 3.14. Find the area of a circle with radius 10.",
+       "a": 314,
+       "sol": "3.14 × 100 = 314.",
+       "tol": 0.05
+      },
+      {
+       "q": "Use π = 3.14. Find the circumference of a circle with diameter 20.",
+       "a": 62.8,
+       "sol": "3.14 × 20 = 62.8.",
+       "tol": 0.05
+      },
+      {
+       "q": "Use π = 3.14. Find the arc length of a 90° sector with radius 8.",
+       "a": 12.56,
+       "sol": "(1/4) × 2 × 3.14 × 8 = 12.56.",
+       "tol": 0.05
+      },
+      {
+       "q": "Use π = 3.14. Find the area of a 60° sector with radius 6.",
+       "a": 18.84,
+       "sol": "(1/6) × 3.14 × 36 = 18.84.",
+       "tol": 0.05
+      }
+     ],
+     "quiz": [
+      {
+       "q": "If the radius of a circle doubles, its area...",
+       "options": [
+        "Doubles",
+        "Triples",
+        "Quadruples",
+        "Stays the same"
+       ],
+       "answer": 2,
+       "why": "Area depends on r², and 2² = 4."
+      },
+      {
+       "q": "A semicircle is a sector with an angle of...",
+       "options": [
+        "90°",
+        "180°",
+        "270°",
+        "360°"
+       ],
+       "answer": 1,
+       "why": "Half of 360° is 180°."
+      }
+     ],
+     "tip": "Ask whether the answer needs units (length) or square units (area) before students write it down."
+    }
+   ]
+  },
+  {
+   "id": "m4",
+   "title": "Exponents, sequences and logs",
+   "blurb": "Powers, patterns and logarithms.",
+   "lessons": [
+    {
+     "id": "m4-l1",
+     "title": "Laws of exponents",
+     "minutes": 25,
+     "goals": [
+      "Apply the laws of exponents",
+      "Work with zero, negative and fractional exponents",
+      "Simplify expressions with powers"
+     ],
+     "notes": [
+      {
+       "list": [
+        "aᵐ × aⁿ = aᵐ⁺ⁿ",
+        "aᵐ ÷ aⁿ = aᵐ⁻ⁿ",
+        "(aᵐ)ⁿ = aᵐⁿ",
+        "a⁰ = 1 (a ≠ 0)",
+        "a⁻ⁿ = 1 / aⁿ",
+        "a^(1/2) = √a"
+       ]
+      },
+      "These laws only work when the bases are the same."
+     ],
+     "examples": [
+      {
+       "q": "Simplify 2³ × 2⁴",
+       "steps": [
+        "Same base, so add the exponents: 2⁷",
+        "2⁷ = 128"
+       ],
+       "a": "128"
+      },
+      {
+       "q": "Evaluate (3²)³",
+       "steps": [
+        "Multiply the exponents: 3⁶ = 729"
+       ],
+       "a": "729"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Evaluate 5² × 5³ ÷ 5⁴.",
+       "a": 5,
+       "sol": "5⁵ ÷ 5⁴ = 5¹ = 5.",
+       "tol": 0.01
+      },
+      {
+       "q": "Evaluate 2⁻³ as a decimal.",
+       "a": 0.125,
+       "sol": "2⁻³ = 1/8 = 0.125.",
+       "tol": 0.01
+      },
+      {
+       "q": "Evaluate 16^(1/2).",
+       "a": 4,
+       "sol": "The exponent 1/2 means the square root: √16 = 4.",
+       "tol": 0.01
+      },
+      {
+       "q": "Evaluate (x³)² × x⁻⁴ when x = 3.",
+       "a": 9,
+       "sol": "x⁶ × x⁻⁴ = x², and 3² = 9.",
+       "tol": 0.01
+      }
+     ],
+     "quiz": [
+      {
+       "q": "What is a⁰ when a ≠ 0?",
+       "options": [
+        "0",
+        "1",
+        "a",
+        "Undefined"
+       ],
+       "answer": 1,
+       "why": "Any non-zero number to the power 0 is 1."
+      },
+      {
+       "q": "Simplify x⁵ ÷ x².",
+       "options": [
+        "x³",
+        "x⁷",
+        "x¹⁰",
+        "x^2.5"
+       ],
+       "answer": 0,
+       "why": "Subtract the exponents: 5 − 2 = 3."
+      }
+     ],
+     "tip": "Warn against \"multiplying the bases\": 2³ × 2⁴ is not 4⁷."
+    },
+    {
+     "id": "m4-l2",
+     "title": "Sequences and series",
+     "minutes": 30,
+     "goals": [
+      "Find terms of arithmetic and geometric sequences",
+      "Sum an arithmetic series",
+      "Identify the common difference or ratio"
+     ],
+     "notes": [
+      "A sequence is an ordered list of numbers that follows a rule.",
+      {
+       "h": "Arithmetic: constant difference d"
+      },
+      {
+       "f": "aₙ = a + (n − 1)d"
+      },
+      {
+       "f": "Sₙ = (n / 2) × (2a + (n − 1)d)"
+      },
+      {
+       "h": "Geometric: constant ratio r"
+      },
+      {
+       "f": "aₙ = a × rⁿ⁻¹"
+      }
+     ],
+     "examples": [
+      {
+       "q": "Arithmetic sequence 3, 7, 11, … Find a₁₀ and S₁₀.",
+       "steps": [
+        "d = 4",
+        "a₁₀ = 3 + 9 × 4 = 39",
+        "S₁₀ = (10/2) × (2 × 3 + 9 × 4) = 5 × 42 = 210"
+       ],
+       "a": "a₁₀ = 39, S₁₀ = 210"
+      },
+      {
+       "q": "Geometric sequence 2, 6, 18, … Find a₅.",
+       "steps": [
+        "r = 3",
+        "a₅ = 2 × 3⁴ = 2 × 81 = 162"
+       ],
+       "a": "162"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Arithmetic sequence 5, 8, 11, … Find the 20th term.",
+       "a": 62,
+       "sol": "a₂₀ = 5 + 19 × 3 = 62.",
+       "tol": 0.01
+      },
+      {
+       "q": "Find the sum of the first 10 terms of 2, 4, 6, …",
+       "a": 110,
+       "sol": "S₁₀ = 5 × (4 + 18) = 110.",
+       "tol": 0.01
+      },
+      {
+       "q": "Geometric sequence 3, 6, 12, … Find the 6th term.",
+       "a": 96,
+       "sol": "a₆ = 3 × 2⁵ = 96.",
+       "tol": 0.01
+      },
+      {
+       "q": "An arithmetic sequence has first term 4 and eighth term 25. Find the common difference.",
+       "a": 3,
+       "sol": "25 = 4 + 7d, so d = 3.",
+       "tol": 0.01
+      }
+     ],
+     "quiz": [
+      {
+       "q": "Which sequence is geometric?",
+       "options": [
+        "2, 5, 8, 11",
+        "3, 6, 12, 24",
+        "1, 4, 9, 16",
+        "10, 8, 6, 4"
+       ],
+       "answer": 1,
+       "why": "Each term is multiplied by 2."
+      },
+      {
+       "q": "What is the common difference of 20, 17, 14, …?",
+       "options": [
+        "3",
+        "−3",
+        "17",
+        "−20"
+       ],
+       "answer": 1,
+       "why": "Each term is 3 less than the one before."
+      }
+     ],
+     "tip": "Ask: \"Do I add the same number every time, or multiply by it?\" before choosing a formula."
+    },
+    {
+     "id": "m4-l3",
+     "title": "Logarithms",
+     "minutes": 30,
+     "goals": [
+      "Convert between exponential and logarithmic form",
+      "Use the product, quotient and power laws",
+      "Solve simple exponential equations"
+     ],
+     "notes": [
+      "A logarithm answers the question: \"what power gives this number?\"",
+      {
+       "f": "log_b x = y   ⇔   bʸ = x"
+      },
+      {
+       "list": [
+        "log(ab) = log a + log b",
+        "log(a / b) = log a − log b",
+        "log(aⁿ) = n log a",
+        "log_b b = 1 and log_b 1 = 0"
+       ]
+      }
+     ],
+     "examples": [
+      {
+       "q": "Evaluate log₂ 32.",
+       "steps": [
+        "Ask: 2 to what power is 32?",
+        "2⁵ = 32"
+       ],
+       "a": "5"
+      },
+      {
+       "q": "Solve 3ˣ = 81.",
+       "steps": [
+        "81 = 3⁴",
+        "So x = 4"
+       ],
+       "a": "x = 4"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Evaluate log₂ 64.",
+       "a": 6,
+       "sol": "2⁶ = 64.",
+       "tol": 0.01
+      },
+      {
+       "q": "Evaluate log₁₀ 0.001.",
+       "a": -3,
+       "sol": "10⁻³ = 0.001.",
+       "tol": 0.01
+      },
+      {
+       "q": "Evaluate log₅ 125.",
+       "a": 3,
+       "sol": "5³ = 125.",
+       "tol": 0.01
+      },
+      {
+       "q": "Evaluate log₂ 8 + log₂ 4.",
+       "a": 5,
+       "sol": "3 + 2 = 5 (or log₂ 32 = 5).",
+       "tol": 0.01
+      }
+     ],
+     "quiz": [
+      {
+       "q": "log₁₀ 1000 equals...",
+       "options": [
+        "2",
+        "3",
+        "10",
+        "100"
+       ],
+       "answer": 1,
+       "why": "10³ = 1000."
+      },
+      {
+       "q": "log a + log b equals...",
+       "options": [
+        "log(a + b)",
+        "log(ab)",
+        "log(a / b)",
+        "(log a)(log b)"
+       ],
+       "answer": 1,
+       "why": "This is the product law."
+      }
+     ],
+     "tip": "Say it aloud: \"log base 2 of 32 asks: 2 to what power is 32?\""
+    }
+   ]
+  },
+  {
+   "id": "m5",
+   "title": "Statistics and probability",
+   "blurb": "Describe data and measure chance.",
+   "lessons": [
+    {
+     "id": "m5-l1",
+     "title": "Descriptive statistics",
+     "minutes": 25,
+     "goals": [
+      "Calculate the mean, median, mode and range",
+      "Choose the most suitable average",
+      "Find a missing value from a given mean"
+     ],
+     "notes": [
+      {
+       "list": [
+        "Mean = sum of values ÷ number of values",
+        "Median = middle value when sorted (average the two middle values if the count is even)",
+        "Mode = most frequent value",
+        "Range = largest − smallest"
+       ]
+      },
+      "Outliers pull the mean a lot, but barely move the median."
+     ],
+     "examples": [
+      {
+       "q": "Data: 4, 8, 6, 5, 3, 8. Find the mean, median, mode and range.",
+       "steps": [
+        "Sorted: 3, 4, 5, 6, 8, 8",
+        "Mean = 34 ÷ 6 ≈ 5.67",
+        "Median = (5 + 6) ÷ 2 = 5.5",
+        "Mode = 8 and range = 8 − 3 = 5"
+       ],
+       "a": "Mean ≈ 5.67, median 5.5, mode 8, range 5"
+      },
+      {
+       "q": "The mean of 5 numbers is 12. A sixth number makes the mean 13. Find it.",
+       "steps": [
+        "Total of 5 numbers = 60",
+        "Total of 6 numbers = 78",
+        "Sixth number = 78 − 60 = 18"
+       ],
+       "a": "18"
+      }
+     ],
+     "practice": [
+      {
+       "q": "Find the mean of 12, 15, 18, 20, 10.",
+       "a": 15,
+       "sol": "75 ÷ 5 = 15.",
+       "tol": 0.01
+      },
+      {
+       "q": "Find the median of 7, 3, 9, 1, 5.",
+       "a": 5,
+       "sol": "Sorted: 1, 3, 5, 7, 9. The middle value is 5.",
+       "tol": 0.01
+      },
+      {
+       "q": "Find the median of 2, 4, 6, 8.",
+       "a": 5,
+       "sol": "Average the middle two: (4 + 6) ÷ 2 = 5.",
+       "tol": 0.01
+      },
+      {
+       "q": "The mean of 6 numbers is 8. A 7th number makes the mean 9. Find the 7th number.",
+       "a": 15,
+       "sol": "New total = 63, old total = 48, so the 7th number is 15.",
+       "tol": 0.01
+      }
+     ],
+     "quiz": [
+      {
+       "q": "A list of salaries has one very large outlier. Which average is most affected?",
+       "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+       ],
+       "answer": 0,
+       "why": "The mean uses every value, so a large outlier drags it up."
+      },
+      {
+       "q": "What is the median of 3, 1, 4, 1, 5?",
+       "options": [
+        "1",
+        "3",
+        "4",
+        "2.8"
+       ],
+       "answer": 1,
+       "why": "Sorted: 1, 1, 3, 4, 5. The middle value is 3 (2.8 is the mean)."
+      }
+     ],
+     "tip": "Always sort the data first. Most median errors come from skipping this step."
+    },
+    {
+     "id": "m5-l2",
+     "title": "Probability basics",
+     "minutes": 30,
+     "goals": [
+      "Calculate simple probabilities",
+      "Use the complement, addition and multiplication rules",
+      "Work with independent events"
+     ],
+     "notes": [
+      {
+       "f": "P(event) = favourable outcomes / total outcomes"
+      },
+      "Probabilities lie between 0 (impossible) and 1 (certain).",
+      {
+       "list": [
+        "Complement: P(not A) = 1 − P(A)",
+        "Mutually exclusive events: P(A or B) = P(A) + P(B)",
+        "Independent events: P(A and B) = P(A) × P(B)"
+       ]
+      }
+     ],
+     "examples": [
+      {
+       "q": "A fair die is rolled. Find P(even).",
+       "steps": [
+        "Favourable outcomes: 2, 4, 6, which is 3",
+        "Total outcomes: 6"
+       ],
+       "a": "1/2"
+      },
+      {
+       "q": "Two fair coins are tossed. Find P(both heads).",
+       "steps": [
+        "P(H) = 1/2 for each coin",
+        "1/2 × 1/2"
+       ],
+       "a": "1/4"
+      }
+     ],
+     "practice": [
+      {
+       "q": "A bag has 3 red and 5 blue balls. Find P(red) as a decimal or fraction.",
+       "a": 0.375,
+       "sol": "3 / 8 = 0.375.",
+       "tol": 0.005
+      },
+      {
+       "q": "A fair die is rolled. Find P(prime number).",
+       "a": 0.5,
+       "sol": "The primes are 2, 3 and 5, so P = 3/6 = 1/2.",
+       "tol": 0.005
+      },
+      {
+       "q": "Two fair dice are rolled. Find P(sum = 7) to 3 decimal places.",
+       "a": 0.167,
+       "sol": "There are 6 ways out of 36: 1/6 ≈ 0.167.",
+       "tol": 0.005,
+       "hint": "List the pairs that make 7."
+      },
+      {
+       "q": "A fair coin is tossed and a die is rolled. Find P(head and a 6) to 3 decimal places.",
+       "a": 0.083,
+       "sol": "1/2 × 1/6 = 1/12 ≈ 0.083.",
+       "tol": 0.005
+      },
+      {
+       "q": "A fair die is rolled. Find P(not a 6) to 3 decimal places.",
+       "a": 0.833,
+       "sol": "1 − 1/6 = 5/6 ≈ 0.833.",
+       "tol": 0.005
+      }
+     ],
+     "quiz": [
+      {
+       "q": "If P(rain) = 0.3, what is P(no rain)?",
+       "options": [
+        "0.3",
+        "0.7",
+        "1.3",
+        "0.03"
+       ],
+       "answer": 1,
+       "why": "1 − 0.3 = 0.7."
+      },
+      {
+       "q": "Independent events A and B have P(A) = 0.5 and P(B) = 0.4. What is P(A and B)?",
+       "options": [
+        "0.9",
+        "0.2",
+        "0.1",
+        "0.45"
+       ],
+       "answer": 1,
+       "why": "0.5 × 0.4 = 0.2."
+      }
+     ],
+     "tip": "Have students list the 36 outcomes of two dice once. It makes \"6 ways to make 7\" obvious."
+    }
+   ]
+  }
+ ]
+}

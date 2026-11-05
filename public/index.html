@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Signal Classroom — live lessons with a shared whiteboard</title>
+<meta name="description" content="Teach live with video, a shared whiteboard, polls and a high school maths course. Students join with a code. No accounts.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico">
+<meta name="theme-color" content="#0d1626">
+<script src="/theme.js"></script>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/site.css">
+</head>
+<body class="site">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/favicon.svg" alt="" width="30" height="30"> Signal Classroom</a>
+    <nav aria-label="Main">
+      <a class="hide-sm" href="#features">Features</a>
+      <a class="hide-sm" href="#how">How it works</a>
+      <a href="/courses">Courses</a>
+      <a class="hide-sm" href="#faq">FAQ</a>
+    </nav>
+    <button class="btn icon" data-theme-toggle type="button"></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero2">
+    <div class="container">
+      <div>
+        <span class="eyebrow"><i></i> Live classes · no accounts · works in the browser</span>
+        <h1>Teach live. <em>Draw together.</em></h1>
+        <p class="lead">A classroom in one link. Students type a class code and their name, then you teach with video, a shared whiteboard, polls and a ready-made maths course.</p>
+        <form class="join-inline" id="joinForm" autocomplete="off">
+          <label for="code" class="sr" style="position:absolute;left:-999px">Class code</label>
+          <input id="code" type="text" maxlength="6" placeholder="CLASS CODE" inputmode="latin" aria-describedby="err" required>
+          <button class="btn primary">Join class</button>
+        </form>
+        <p class="join-err" id="err" role="alert"></p>
+        <div class="hero-links"><a href="/courses">Browse the maths course →</a><a href="#how">See how it works</a></div>
+      </div>
+
+      <div class="board-wrap">
+        <div class="board-card" aria-hidden="true">
+          <svg viewBox="0 0 640 440" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#f1f0e6" stroke-linecap="round" stroke-linejoin="round">
+            <g stroke-opacity=".12" stroke-width="1">
+              <path d="M0 80H640M0 160H640M0 240H640M0 320H640M0 400H640M80 0V440M160 0V440M240 0V440M320 0V440M400 0V440M480 0V440M560 0V440"/>
+            </g>
+            <g stroke-width="2.5" stroke-opacity=".75">
+              <path class="draw" style="--len:480;--d:.2s" d="M80 320H560"/>
+              <path class="draw" style="--len:330;--d:.4s" d="M320 70V390"/>
+            </g>
+            <path class="draw" style="--len:760;--d:.9s" stroke="#ffb84d" stroke-width="5" d="M170 120Q320 520 470 120"/>
+            <ellipse class="draw" style="--len:220;--d:2.4s" cx="320" cy="320" rx="36" ry="20" stroke="#3ddc97" stroke-width="3"/>
+            <path class="draw" style="--len:120;--d:3s" stroke="#3ddc97" stroke-width="3" d="M360 350L410 385M410 385l-14-2M410 385l-3-14"/>
+            <g font-family="'Segoe Print','Bradley Hand','Comic Sans MS',cursive" fill="#f1f0e6" stroke="none">
+              <text class="fade" style="--d:1.6s" x="30" y="62" font-size="26">x² − 5x + 6 = 0</text>
+              <text class="fade" style="--d:2.1s" x="30" y="104" font-size="26" fill="#ffb84d">(x − 2)(x − 3) = 0</text>
+              <text class="fade" style="--d:1.9s" x="262" y="196" font-size="28">y = x²</text>
+              <text class="fade" style="--d:3.2s" x="414" y="402" font-size="22" fill="#3ddc97">vertex</text>
+            </g>
+            <g class="laser"><circle cx="470" cy="120" r="9" fill="#ff2d55" stroke="none"/><circle cx="470" cy="120" r="18" fill="#ff2d55" fill-opacity=".25" stroke="none"/></g>
+          </svg>
+          <div class="tiles"><span>S</span><span>A</span><span>M</span></div>
+        </div>
+        <div class="tag-float">✋ Meron raised a hand</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="features">
+    <div class="container">
+      <div class="sec-head reveal"><div class="kicker">Everything in one room</div><h2>Tools a real lesson needs</h2><p>No plug-ins and no tab juggling. Open the link and teach.</p></div>
+      <div class="grid3">
+        <article class="feat reveal"><div class="ic">✏️</div><h3>Shared whiteboard</h3><p>Pen, highlighter, shapes, text, laser pointer, multiple pages and PNG export. Late joiners see the whole board.</p></article>
+        <article class="feat reveal"><div class="ic">🎥</div><h3>Video and screen share</h3><p>Camera, microphone and screen sharing in the browser. Spotlight any student or show a gallery view.</p></article>
+        <article class="feat reveal"><div class="ic">🛡️</div><h3>You stay in control</h3><p>Lock the class, lock chat, mute everyone, allow drawing per student, or remove someone with one click.</p></article>
+        <article class="feat reveal"><div class="ic">📊</div><h3>Polls and timer</h3><p>Check understanding in seconds. Run a quick poll, then reveal the results and move on.</p></article>
+        <article class="feat reveal"><div class="ic">{ }</div><h3>Shared code pad</h3><p>Write notes or JavaScript together. Anyone can run the code safely in their own browser.</p></article>
+        <article class="feat reveal"><div class="ic">📒</div><h3>Attendance and recording</h3><p>See who joined and for how long. Record the board and audio for students who missed class.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block band" id="how">
+    <div class="container">
+      <div class="sec-head reveal"><div class="kicker">How it works</div><h2>From idea to live class in a minute</h2></div>
+      <div class="steps">
+        <div class="step reveal"><h3>Create a class</h3><p>Set up a class from your private teacher panel. You get a code and a private teacher link.</p></div>
+        <div class="step reveal"><h3>Share the code</h3><p>Send the 6-character code on Telegram or WhatsApp. Students enter it with their name, and that is all.</p></div>
+        <div class="step reveal"><h3>Teach together</h3><p>Draw, ask questions, run a poll and load a maths lesson straight onto the board.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container course-teaser">
+      <div class="reveal">
+        <div class="sec-head" style="margin:0 0 18px"><div class="kicker">Included course</div><h2>High school Maths, ready to teach</h2><p>14 lessons from equations to probability. Notes, worked examples, auto-checked practice and quizzes. Use them in a live class or let students study alone.</p></div>
+        <a class="btn primary big" href="/courses">Explore the course</a>
+      </div>
+      <div class="mod-list reveal" id="modList" aria-label="Course modules">
+        <div class="mod"><b>1</b><div><strong>Algebra foundations</strong><span>3 lessons</span></div></div>
+        <div class="mod"><b>2</b><div><strong>Quadratics and functions</strong><span>3 lessons</span></div></div>
+        <div class="mod"><b>3</b><div><strong>Geometry and trigonometry</strong><span>3 lessons</span></div></div>
+        <div class="mod"><b>4</b><div><strong>Exponents, sequences and logs</strong><span>3 lessons</span></div></div>
+        <div class="mod"><b>5</b><div><strong>Statistics and probability</strong><span>2 lessons</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block band faq" id="faq">
+    <div class="container" style="max-width:820px">
+      <div class="sec-head reveal"><div class="kicker">Questions</div><h2>Good to know</h2></div>
+      <details class="reveal"><summary>Do students need an account?</summary><p>No. They enter the class code and a display name. Nothing else.</p></details>
+      <details class="reveal"><summary>How many people can join?</summary><p>Up to 12 per class. Video works best with about 6–8 cameras on, so ask larger groups to keep cameras off unless speaking.</p></details>
+      <details class="reveal"><summary>Does it work on phones?</summary><p>Yes, in any modern browser. Drawing works with touch and stylus. Screen sharing is limited on some phones.</p></details>
+      <details class="reveal"><summary>Is recording private?</summary><p>Only the teacher can record, the file is saved on the teacher's own device, and everyone sees a "Recording" badge while it runs.</p></details>
+      <details class="reveal"><summary>Can I use the course without a live class?</summary><p>Yes. Open Courses, pick a lesson and work through the practice questions. Progress is saved in your browser.</p></details>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container reveal">
+      <h2>Ready when your students are.</h2>
+      <p>Have a code? Join now. Want to study first? Start the maths course.</p>
+      <a class="btn primary big" href="#main" onclick="document.getElementById('code').focus()">Enter a class code</a>
+      <a class="btn big" href="/courses">Browse courses</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="container">
+    <div>© <span id="year"></span> Signal Classroom · Developed by <a href="https://sol-ethio-coder.netlify.app" target="_blank" rel="noopener">Sol Ethio Coder</a></div>
+    <nav aria-label="Footer"><a href="/courses">Courses</a><a href="#features">Features</a><a href="#faq">FAQ</a></nav>
+  </div>
+</footer>
+<script src="/config.js"></script>
+<script src="/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Class — Signal Classroom</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico">
+<meta name="theme-color" content="#0d1626">
+<script src="/theme.js"></script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="overlay" id="join">
+  <button class="btn theme-fixed" data-theme-toggle type="button"></button>
+  <form class="card" id="joinForm" autocomplete="off">
+    <h2 id="jTitle">Joining…</h2>
+    <p class="muted" style="margin:0" id="jSub"></p>
+    <label for="jName">Your name</label>
+    <input id="jName" type="text" maxlength="32" required>
+    <div id="jPassBox" hidden><label for="jPass">Class password</label><input id="jPass" type="password"></div>
+    <label class="check"><input type="checkbox" id="jMic" checked> Join with microphone</label>
+    <label class="check" style="margin-top:0"><input type="checkbox" id="jCam" checked> Join with camera</label>
+    <p class="err" id="jErr" role="alert"></p>
+    <button class="btn primary" style="width:100%" id="jBtn">Join class</button>
+    <p class="credit">Developed by <a href="https://sol-ethio-coder.netlify.app" target="_blank" rel="noopener">Sol Ethio Coder</a></p>
+  </form>
+</div>
+
+<div class="overlay" id="goodbye" hidden>
+  <button class="btn theme-fixed" data-theme-toggle type="button"></button>
+  <div class="card"><h2 id="byeTitle">Class ended</h2><p class="muted" id="byeText"></p><a class="btn primary" href="/">Back to home</a>
+    <p class="credit">Developed by <a href="https://sol-ethio-coder.netlify.app" target="_blank" rel="noopener">Sol Ethio Coder</a></p></div>
+</div>
+
+<div id="app" hidden>
+  <header class="top">
+    <h1 id="title"></h1>
+    <button class="chip" id="codeChip" title="Copy student link"></button>
+    <span class="rec" id="recBadge" hidden>● Recording</span>
+    <span class="grow"></span>
+    <span id="timerBox" hidden></span>
+    <span class="pill" id="net">connected</span>
+    <button class="btn small" data-theme-toggle type="button"></button>
+  </header>
+
+  <main class="room">
+    <section id="stage" data-tab="board">
+      <nav class="tabs" id="stageTabs">
+        <button class="tab active" data-tab="board">Board</button>
+        <button class="tab" data-tab="gallery">Gallery</button>
+        <button class="tab" data-tab="pad">Code pad</button>
+      </nav>
+
+      <div id="videos"></div>
+
+      <div id="boardWrap">
+        <div class="toolbar" id="toolbar">
+          <button class="tool active" data-tool="pen" title="Pen">✏️</button>
+          <button class="tool" data-tool="highlighter" title="Highlighter">🖍️</button>
+          <button class="tool" data-tool="eraser" title="Eraser">🧽</button>
+          <button class="tool" data-tool="line" title="Line">╱</button>
+          <button class="tool" data-tool="rect" title="Rectangle">▭</button>
+          <button class="tool" data-tool="ellipse" title="Ellipse">◯</button>
+          <button class="tool" data-tool="arrow" title="Arrow">➜</button>
+          <button class="tool" data-tool="text" title="Text">T</button>
+          <button class="tool" data-tool="laser" title="Laser pointer">🔴</button>
+          <span class="sep"></span>
+          <span id="swatches"></span>
+          <input type="color" id="colorPick" value="#111827" title="Custom colour" aria-label="Custom colour">
+          <input type="range" id="sizeRange" min="1" max="30" value="4" title="Size" aria-label="Brush size">
+          <span class="sep"></span>
+          <button class="tool" id="undo" title="Undo (Ctrl+Z)">↶</button>
+          <button class="tool" id="redo" title="Redo (Ctrl+Y)">↷</button>
+          <button class="tool" id="savePng" title="Save page as PNG">💾</button>
+          <span class="sep host-only"></span>
+          <button class="tool host-only" id="clearPage" title="Clear this page">🗑️</button>
+          <select class="host-only" id="bgSel" aria-label="Board background">
+            <option value="grid">Grid</option><option value="white">Plain</option><option value="lines">Lines</option><option value="dark">Chalkboard</option>
+          </select>
+          <span class="sep"></span>
+          <button class="tool host-only" id="prevPage" title="Previous page">◀</button>
+          <span id="pageLabel" class="hint">1 / 1</span>
+          <button class="tool host-only" id="nextPage" title="Next page">▶</button>
+          <button class="tool host-only" id="newPage" title="New page">＋</button>
+        </div>
+        <div id="boardArea"><div id="canvasWrap" data-bg="grid"><canvas id="board"></canvas></div></div>
+        <div class="hint" id="drawHint" hidden>Drawing is off for you. Raise your hand and ask the teacher to enable it.</div>
+      </div>
+
+      <div id="padWrap">
+        <div class="toolbar">
+          <button class="btn small" id="runJs">▶ Run JavaScript</button>
+          <button class="btn small" id="padCopy">Copy</button>
+          <button class="btn small" id="padSave">Download</button>
+          <span class="hint" id="padHint"></span>
+        </div>
+        <textarea id="pad" spellcheck="false" placeholder="Shared notes or code. The teacher (and anyone allowed to draw) can edit; everyone sees it live."></textarea>
+        <pre id="padOut" aria-live="polite">Output appears here. Code runs in your own browser, in a sandbox.</pre>
+      </div>
+    </section>
+
+    <aside id="side">
+      <div id="sideTabs" class="tabs">
+        <button class="tab active" data-p="people">People</button>
+        <button class="tab" data-p="chat">Chat<span class="dot" id="chatDot" hidden></span></button>
+        <button class="tab" data-p="poll">Poll</button>
+        <button class="tab host-only" data-p="class">Class</button>
+      </div>
+
+      <div class="panel" id="p-people"><div id="peopleList"></div>
+        <p class="credit">Developed by <a href="https://sol-ethio-coder.netlify.app" target="_blank" rel="noopener">Sol Ethio Coder</a></p></div>
+
+      <div class="panel chat" id="p-chat">
+        <div id="chatLog"></div>
+        <form id="chatForm">
+          <input type="text" id="chatInput" maxlength="1000" placeholder="Message" autocomplete="off" aria-label="Message">
+          <label class="btn small" style="margin:0;cursor:pointer" title="Share a file (max 2 MB)">📎<input type="file" id="fileIn" hidden></label>
+          <button class="btn primary small">Send</button>
+          <label class="check student-only" style="margin:0;font-size:13px"><input type="checkbox" id="privChk"> Only teacher</label>
+        </form>
+      </div>
+
+      <div class="panel" id="p-poll" hidden>
+        <div id="pollBox"></div>
+        <form class="host-only sec" id="pollForm">
+          <h3>New poll</h3>
+          <input type="text" id="pollQ" maxlength="200" placeholder="Question" required>
+          <label for="pollO">Options (one per line)</label>
+          <textarea id="pollO" rows="4" placeholder="Option A&#10;Option B" required></textarea>
+          <button class="btn primary small" style="margin-top:8px">Start poll</button>
+        </form>
+      </div>
+
+      <div class="panel host-only" id="p-class" hidden>
+        <div class="sec" style="border:0;margin:0"><h3>Room rules</h3>
+          <label class="check"><input type="checkbox" data-set="locked"> Lock class (no new joins)</label>
+          <label class="check"><input type="checkbox" data-set="chatLocked"> Lock chat (teacher only)</label>
+          <label class="check"><input type="checkbox" data-set="drawAll"> Students can draw &amp; edit pad</label>
+          <label class="check"><input type="checkbox" data-set="screenAll"> Students can share screen</label>
+        </div>
+        <div class="sec"><h3>Everyone</h3>
+          <button class="btn small" id="muteAll">Mute all</button>
+          <button class="btn small" id="lowerAll">Lower all hands</button>
+        </div>
+        <div class="sec"><h3>Timer</h3>
+          <div style="display:flex;gap:6px"><input type="number" id="timerMin" min="1" max="180" value="5" style="width:80px" aria-label="Minutes"><button class="btn small" id="timerStart">Start</button><button class="btn small" id="timerStop">Stop</button></div>
+        </div>
+        <div class="sec"><h3>Course library</h3>
+          <label for="lessonSel" style="margin-top:0">Choose a lesson</label>
+          <select id="lessonSel" aria-label="Lesson"><option value="">Loading…</option></select>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">
+            <button class="btn small" id="lessonPad" type="button">Put outline in pad</button>
+            <button class="btn small" id="lessonPoll" type="button">Ask quiz question</button>
+            <a class="btn small" id="lessonOpen" target="_blank" rel="noopener" href="/courses" style="text-decoration:none">Open lesson</a>
+          </div>
+          <p class="hint" id="lessonHint">The outline goes to the shared pad. Quiz questions go out as polls, and you see the correct answer privately.</p>
+        </div>
+        <div class="sec"><h3>Lesson</h3>
+          <button class="btn small" id="recBtn">⏺ Record board + audio</button>
+          <p class="hint">Everyone sees a Recording badge while this is on. The file is saved on your device.</p>
+        </div>
+        <div class="sec"><button class="btn danger" id="endClass">End class for everyone</button></div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="controls">
+    <button class="btn" id="micBtn" title="Microphone">🎤</button>
+    <button class="btn" id="camBtn" title="Camera">📷</button>
+    <button class="btn" id="screenBtn" title="Share screen">🖥️</button>
+    <button class="btn" id="handBtn" title="Raise hand">✋</button>
+    <button class="btn" id="reactBtn" title="Reactions">😀</button>
+    <div id="reactBar" hidden></div>
+    <button class="btn danger" id="leaveBtn">Leave</button>
+  </footer>
+</div>
+
+<script src="/config.js"></script>
+<script>document.write('<script src="'+(window.SIGNAL_API||'').replace(/\/$/,'')+'/socket.io/socket.io.js"><\/script>')</script>
+<script src="/whiteboard.js"></script>
+<script src="/room.js"></script>
+</body>
+</html>

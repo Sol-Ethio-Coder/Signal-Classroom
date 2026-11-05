@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin — Signal Classroom</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico">
+<meta name="theme-color" content="#0d1626">
+<script src="/theme.js"></script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<button class="btn theme-fixed" data-theme-toggle type="button"></button>
+<div class="overlay" id="login">
+  <form class="card" id="loginForm">
+    <h2>Admin panel</h2>
+    <p class="muted" style="margin:0">Sign in to manage your classes.</p>
+    <label for="user">Username</label>
+    <input id="user" type="text" required autocomplete="username" autocapitalize="none" spellcheck="false">
+    <label for="pass">Password</label>
+    <input id="pass" type="password" required autocomplete="current-password">
+    <p class="err" id="loginErr" role="alert"></p>
+    <button class="btn primary" style="width:100%">Sign in</button>
+    <p class="foot"><a href="/">Back to home</a></p>
+    <p class="credit">Developed by <a href="https://sol-ethio-coder.netlify.app" target="_blank" rel="noopener">Sol Ethio Coder</a></p>
+  </form>
+</div>
+
+<div class="wrap" id="dash" hidden>
+  <div class="bar">
+    <div class="brand"><i></i> Signal Classroom · Admin</div>
+    <div class="actions"><button class="btn" data-theme-toggle type="button"></button><button class="btn" id="logout">Sign out</button></div>
+  </div>
+  <section class="card" id="setup" style="margin-bottom:16px"><h2>Setup checklist</h2><p class="muted" style="margin:4px 0 0">Things to finish before teaching real students.</p><ul class="checklist" id="checklist"></ul></section>
+  <form class="card" id="createForm">
+    <h2>New class</h2>
+    <div class="row">
+      <div><label for="title">Class title</label><input id="title" type="text" maxlength="80" placeholder="React basics — Week 3"></div>
+      <div><label for="pw">Class password (optional)</label><input id="pw" type="password" maxlength="64" autocomplete="new-password"></div>
+      <button class="btn primary">Create class</button>
+    </div>
+  </form>
+  <div class="rooms" id="rooms"></div>
+  <p class="credit">Developed by <a href="https://sol-ethio-coder.netlify.app" target="_blank" rel="noopener">Sol Ethio Coder</a></p>
+</div>
+
+<dialog id="dlg">
+  <h2 id="dlgTitle">Attendance</h2>
+  <div style="max-height:55vh;overflow:auto;margin:12px 0"><table id="attTable"></table></div>
+  <div class="actions"><button class="btn" id="csv">Download CSV</button><button class="btn" id="close">Close</button></div>
+</dialog>
+<script src="/config.js"></script>
+<script src="/admin.js"></script>
+</body>
+</html>

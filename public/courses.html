@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Courses — Signal Classroom</title>
+<meta name="description" content="Free high school maths course with notes, worked examples, practice and quizzes.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico">
+<meta name="theme-color" content="#0d1626">
+<script src="/theme.js"></script>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/site.css">
+</head>
+<body class="site">
+<header class="nav"><div class="container">
+  <a class="brand" href="/"><img src="/favicon.svg" alt="" width="30" height="30"> Signal Classroom</a>
+  <nav aria-label="Main"><a href="/">Home</a><a href="/courses" aria-current="page">Courses</a></nav>
+  <button class="btn icon" data-theme-toggle type="button"></button>
+</div></header>
+<main class="container">
+  <div class="page-head">
+    <span class="eyebrow"><i></i> Learn at your own pace</span>
+    <h1>Courses</h1>
+    <p class="lead">Short lessons with worked examples and practice that checks your answers. Your progress stays in this browser.</p>
+  </div>
+  <div class="cgrid" id="grid" aria-live="polite"><p class="muted">Loading courses…</p></div>
+</main>
+<footer class="site-foot"><div class="container"><div>© <span id="year"></span> Signal Classroom · Developed by <a href="https://sol-ethio-coder.netlify.app" target="_blank" rel="noopener">Sol Ethio Coder</a></div><nav><a href="/">Home</a></nav></div></footer>
+<script src="/site.js"></script>
+<script>
+(function(){
+  var grid=document.getElementById('grid');
+  fetch('/content/index.json').then(function(r){return r.json()}).then(function(list){
+    grid.textContent='';
+    list.forEach(function(c){
+      var done=0,total=c.lessons;
+      try{var p=JSON.parse(localStorage.getItem('signal:progress:'+c.id)||'{}');done=Object.keys(p).filter(function(k){return p[k]&&p[k].done}).length}catch(e){}
+      var a=document.createElement('a');a.className='ccard';a.href='/course?c='+encodeURIComponent(c.id);
+      var h=document.createElement('h2');h.textContent=c.title;
+      var sub=document.createElement('p');sub.textContent=c.description;
+      var meta=document.createElement('div');meta.className='meta';
+      [c.level,c.lessons+' lessons',c.modules+' modules','about '+Math.round(c.minutes/60)+' hours'].forEach(function(t){var s=document.createElement('span');s.className='pill';s.textContent=t;meta.append(s)});
+      var bar=document.createElement('div');bar.className='progress';var i=document.createElement('i');i.style.width=Math.round(done/total*100)+'%';bar.append(i);
+      var st=document.createElement('p');st.textContent=done?done+' of '+total+' lessons completed':'Not started yet';
+      var go=document.createElement('strong');go.textContent=done?'Continue →':'Start the course →';go.style.color='var(--acc-text)';
+      a.append(h,sub,meta,bar,st,go);grid.append(a);
+    });
+  }).catch(function(){grid.textContent='Could not load courses.'});
+})();
+</script>
+</body>
+</html>
